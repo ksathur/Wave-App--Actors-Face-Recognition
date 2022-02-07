@@ -149,28 +149,12 @@ async def dashboard(q: Q):
 		
 		items = [ui.text_xl('Files uploaded!')]
 		img_path = []
-
-		# if not os.path.exists('./test_sample'):
-		# 	os.mkdir('./test_sample')
-		# else:
-		# 	im_names = os.listdir('./test_sample')
-
-		# 	for samples in range(len(im_names)):
-		# 		os.remove('./test_sample/{samples}')
-			# os.mkdir('./test_sample')
 		for link in links:
 			local_path = await q.site.download(link, './test_sample')
 			img_path.append(link)
-			#
-			# The file is now available locally; process the file.
-			# To keep this example simple, we just read the file size.
-			#
 			size = os.path.getsize(local_path)
-
 			items.append(ui.link(label=f'{os.path.basename(link)} ({size} bytes)', download=True, path=link))
-			# Clean up
-			# os.remove(local_path)
-
+			
 		q.client.img_paths = img_path
 		items.append(ui.button(name='back', label='Back', primary=True))
 		q.page['example'].items = items
