@@ -22,7 +22,9 @@ pip install -r requirements.txt
 ```
 wave run wave_face_recognition.py
 ```
-Go to http://localhost:10101/actors_face_detection to visualize the app. A recorded demo video is available at `./demo_video.mp4`.
+Go to http://localhost:10101/actors_face_detection to visualize the app.
+Screenshot of the interfaces are available at `./interface_1.PNG`, and `./interface_2.PNG`.
+A recorded demo video is available at `./demo_video.mp4`.
 
 ## 4. Custom Training
 #### 4.1 Upload the folder contains the images of each person into `./dataset/raw`.
