@@ -8,7 +8,7 @@ cd Wave-App--Actors-Face-Recognition
 ```
 ## 2. Environment
 This code runs on Python 3.7
-### 2.1 Create a conda environment with python 3.7 and activate it.
+### 2.1 Create a conda environment with python 3.7 and activate it
 ```
 conda create -n face_recog_wave python=3.7
 conda activate face_recog_wave
@@ -25,32 +25,32 @@ wave run wave_face_recognition.py
 Go to http://localhost:10101/actors_face_detection to visualize the app. A recorded demo video is available at `./demo_video.mp4`.
 
 ## 4. Custom Training
-- Upload the folder contains the images of each person into `./dataset/raw`
-- Change the directory to `./utils`
+#### 4.1 Upload the folder contains the images of each person into `./dataset/raw`.
+#### 4.2 Change the directory to `./utils`.
 ```
 cd utils
 ```
-- Run `face_csv_file_writter.py` to create a `.csv` file which consists of images directories and labels.
+#### 4.3 Run `face_csv_file_writter.py` to create a `.csv` file which consists of images directories and labels.
 ```
 python `face_csv_file_writter.py`
 ```
-- Go back to previous working directory.
+#### 4.4 Go back to previous working directory.
 ```
 cd ../
 ```
-- Run `face_classifier.py` to start the training. The model and the accuracy information will be saved into `./dumps/model` and `./dumps/accuracy` respectively.
+#### 4.5 Run `face_classifier.py` to start the training. The model and the accuracy information will be saved into `./dumps/model` and `./dumps/accuracy` respectively.
 ```
 python `face_classifier.py`
 ```
-- Run `face_tester.py` to evaluate the peformance of the model on validation dataset.
+#### 4.6 Run `face_tester.py` to evaluate the peformance of the model on validation dataset.
 ```
 python face_tester.py
 ```
-- Run `plot.py` to visualize the performance (via confusion matrix) (`./dumps/accuracy/cfm.png`)
+#### 4.7 Run `plot.py` to visualize the performance (via confusion matrix) (`./dumps/accuracy/cfm.png`).
 ```
 python plot.py
 ```
-- To run testing on any test data download the images into `./test_sample` and run the `face_classifier_sample_test.py`
+#### 4.8 To run testing on any test data download the images into `./test_sample` and run the `face_classifier_sample_test.py`.
 ```
 python face_classifier_sample_test.py
 ```
